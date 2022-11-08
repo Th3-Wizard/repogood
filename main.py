@@ -22,9 +22,9 @@ from pydownloader.downloader import Downloader
 import shorturl
 import xdlink
 
-#tl_admin_users = ['Stvz20', 'Mraansn', 'Javykko', 'claukm', 'rhassanlp13', 'Rassr8', 'SGD99', 'DioelHD', 'WilyElGris', 'joCanG3l', 'adryes95'] #Poner aqui los user con acceso permanente
-tl_admin_users = ['Stvz20']
-godlist = ['Stvz20','adryes95'] #Poner aqui los admin 
+#tl_admin_users = ['Stvz20', 'EL_Wizard'] #Poner aqui los user con acceso permanente
+tl_admin_users = ['EL_Wizard']
+godlist = ['EL_Wizard'] #Poner aqui los admin 
 
 async def get_root(username):
     if os.path.isdir(config.ROOT_PATH+username)==False:
@@ -171,7 +171,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
 
     #if username not in config.ACCES_USERS:
     if username not in tl_admin_users:
-        await bot.send_message(ev.chat.id,'🚫No Tiene Acceso🚫 Contacta con @Stvz20')
+        await bot.send_message(ev.chat.id,'🚫No Tiene Acceso🚫 Contacta con @EL_Wizard')
         return
 
     if not os.path.isdir(config.ROOT_PATH + username):
@@ -213,8 +213,8 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
         pass
 
     if '/start' in text:
-        reply = 'Bienvid@ a UploadFast-Bot👋\nPara aprender a usar el BoT usa /help\n\n'
-        reply += '<a href="https://t.me/UploadFastBoTFree">Canal Del BoT</a>\n\n'
+        reply = 'Bienvid@ al bot personal de @EL_Wizard👋\nPara aprender a usar el BoT usa /help\n\n'
+        reply += '<a href="https://t.me/EL_Wizard">DUEÑO DEL BOT</a>\n\n'
         #reply += '<a href="https://t.me/Stvz20">Contactar Adm</a>'
         message = await bot.send_message(ev.chat.id,reply,parse_mode='html')
         pass
@@ -354,7 +354,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             await bot.send_file(ev.chat,txtsendname,
                                 caption=f'{txtsendname}',
                                 thumb='thumb.png',
-                                buttons=[Button.url('👤Stvz20','https://t.me/Stvz20')])
+                                buttons=[Button.url('👤Stvz20','https://t.me/EL_Wizard')])
             for fitem in listdir:
                 try:
                     os.unlink(fitem)
